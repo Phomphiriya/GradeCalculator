@@ -1,7 +1,25 @@
 let content1 = document.getElementById('content-1');
-let textHtml = '<b> I love you </b>';
-textHtml += '<i> I hate you </i>';
+let textHtml = '<b> text in HTML </b>';
+textHtml += '<i> Add text </i>';
 content1.innerHTML = textHtml;
+
+let submitButton = document.getElementById('submit-button');
+let message = document.getElementById('message');
+
+var l = 10;
+var l = 20;
+function showMessage(){
+    message.innerHTML = 'Submit completed';
+}
+
+submitButton.addEventListener('click',showMessage);
+
+
+
+
+
+
+
 
 console.log("hello world");
 
