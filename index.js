@@ -1,35 +1,40 @@
-let content1 = document.getElementById('content-1');
-let textHtml = '<b> text in HTML </b>';
-textHtml += '<i> Add text </i>';
-content1.innerHTML = textHtml;
+let subjectInput = document.getElementById("subject-input");
+let creditInput = document.getElementById("credit-input");
+let gradeInput = document.getElementById("grade-input");
 
-let submitButton = document.getElementById('submit-button');
-let message = document.getElementById('message');
+let subjectInput2 = document.getElementById("subject-input2");
+let creditInput2 = document.getElementById("credit-input2");
+let gradeInput2 = document.getElementById("grade-input2");
 
-var l = 10;
-var l = 20;
-function showMessage(){
-    message.innerHTML = 'Submit completed';
+let runbutton = document.getElementById("run-button");
+let output = document.getElementById("output");
+
+function printOutput(){
+    let credit = Number(creditInput.value);
+    let grade = Number(gradeInput.value);
+    let credit2 = Number(creditInput2.value);
+    let grade2 = Number(gradeInput2.value);
+
+    let outputHtml = "";
+    
+    if(grade < 0){
+        output.innerHTML = "Can't calculated";
+        return;
+    }
+    if(credit < 0){
+        output.innerHTML = "Can't calculated";
+        return;
+    }
+    let allCredit = credit + credit2;
+    let calGrade = credit * grade;
+
+    let calGrade2 = credit2 * grade2;
+    let allGrade = calGrade + calGrade2;
+
+    
+    outputHtml = allGrade/allCredit;
+
+    output.innerHTML = "Your GPA is : " + outputHtml;
 }
 
-submitButton.addEventListener('click',showMessage);
-
-
-
-
-
-
-
-
-console.log("hello world");
-
-function getPyramidArea(lenght,width,heigth){
-    let basearea = lenght * width;
-    let pyramidVolume = 1/3 * (basearea * heigth);
-    return pyramidVolume;
-}
-
-let area1 = getPyramidArea(2,3,4);
-let area2 = getPyramidArea(4,5,6);
-
-console.log('Area 1 = '+ area1 + ' Area 2 = '+ area2);
+runbutton.addEventListener("click",printOutput);
