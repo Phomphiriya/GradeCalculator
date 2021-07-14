@@ -1,0 +1,21 @@
+.top-header{
+    background-color: rgb(39, 38, 38);
+}
+.menu{
+    padding: 10px;
+    display: inline-block;
+    /*text-decoration: none;*/
+    color: whitesmoke;
+    padding: 10px;
+    text-align: right;
+}
+.brand{
+    color: whitesmoke;
+    font:icon;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5%;
+}
+.uk-padding{
+    padding: 200px;
+}
